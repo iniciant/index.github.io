@@ -1,2 +1,2 @@
-# index.github.io
+# http://index.github.io
 my website
