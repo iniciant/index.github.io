@@ -1,0 +1,61 @@
+<!DOCITYPE html>
+<head>
+<title>test de javascript</title>
+<style>
+#fom{
+width:40px;
+}
+</style>
+<script type="text/javascript">
+function test(){
+var falta = fom.falta.value;
+var totalmedia = (parseInt(fom.nota1.value)+parseInt(fom.nota2.value))/2;
+
+if((falta>=0)&&(falta<=3)){
+    if(totalmedia>=7){
+	 alert('a provado,nota média:'+totalmedia);
+	}
+	else{
+	  if(totalmedia>=5){
+	   let exame=parseInt(prompt('nota do exame'));
+	   totalmedia=(totalmedia+exame)/2;
+	   if(totalmedia>=6){
+	    alert('aprovado do exame de nota media:'+totalmedia);
+	   }
+	   else{
+	    alert('reprovado do exame de nota media:'+totalmedia);
+	   }
+	  
+	   
+	  }
+	  else{
+	   alert('reprovado por nota:'+totalmedia);
+	  }
+	}
+}
+else{
+alert('reprovado por falta:'+falta);
+}
+    
+}
+
+</script>
+</head>
+<body>
+<form id="fom">
+<fieldset>
+<legend>nota média</legend>
+
+     <label>falta</label>
+	 <input type="text" name="falta"/>
+	 <label>nota 1</label>
+	 <input type="text" name="nota1"/>
+	 <label>nota 2</label>
+	  <input type="text" name="nota2"/>
+	 <br/>
+	 <a href="#" onclick="test();">ok</a>
+	  
+</fieldset>
+</form>
+</body>
+</html>
